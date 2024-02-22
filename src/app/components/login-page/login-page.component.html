@@ -1,0 +1,36 @@
+<h3 class="text-3xl font-semibold  text-center text-white font-main mt-10 ">Zaloguj się</h3>
+<div class=" mt-6 flex justify-center w-full h-fit text-white font-main">
+    <div class="w-2/3 h-3/4 border-transparent rounded-md px-16 "
+    [ngStyle]="{'background': 'linear-gradient(to bottom right, rgb(221, 221, 221, 0.06), rgb(221, 221, 221, 0.06), rgba(221, 221, 221, 0.06))'}">
+    <form action="" (ngSubmit)="login()">
+        <div class="flex flex-col mt-16">
+        <h3 class="mb-8">Czy masz konto HBO Max?</h3>
+        <input class="color-input p-4 mb-2 rounded-md w-full focus:border-white text-lg ml-2 " [(ngModel)]="user.email" name="email" type="text"  placeholder="Adres e-mail">
+        <div class="relative">
+            <input class="color-input p-4 rounded-md w-full focus:border-white text-lg ml-2 z-0" type="password" [(ngModel)]="user.password" #password name="password" placeholder="Hasło">
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3  z-10">
+              <img class="h-6 w-6 " src="./assets/show-password.png" alt="" #showPassword (click)="showPasswordIconFunc()">
+              <img class="h-6 w-6 -ml-6" src="./assets/hide-password.png" alt="" #hidePassword (click)="hidePasswordIconFunc()">
+            </div>
+          </div>
+        
+    </div>
+    <button type="submit" class="w-full  xl:w-fit  mt-5 focus:outline-none text-gray-300 bg-violet-800 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-semibold rounded-lg text-lg px-5 py-2.5 mb-2 ">Zaloguj się</button>
+    <p class="xl:inline block xl:ml-5 font-semibold text-center xl:text-wrap text-purple-400">Nie pamiętasz hasła?</p>
+    </form>
+    <div [hidden]="wrongPasswordOrEmail">
+    <span class="flex justify-center xl:text-base xl:mt-0 mt-4 text-center text-sm text-red-700" >Adres e-mail lub hasło jest niepoprawne</span>
+  </div>
+    
+    <div class="flex items-center mt-10">
+        <hr class="flex-grow ">
+        <p class="font-bold mx-2">LUB</p>
+        <hr class="flex-grow">
+    </div>
+    <p class="mt-10 xl:text-wrap text-center">Masz wykupiony dostęp do HBO Max przez operatora, ale jeszcze się nie zarejestrowałeś?</p>
+    <button type="button" class=" mt-5 focus:outline-none text-gray-300 bg-violet-800 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 font-semibold rounded-lg text-lg px-5 py-2.5 mb-8 ">Zarejestruj się u operatora</button>
+    
+</div>
+    
+</div>
+

@@ -1,0 +1,59 @@
+
+<div class="text-white font-main">
+    @if(movie){
+    <div>
+        <img [src]="movie.path" alt class="absolute top-0 w-full h-5/6 "
+            style="mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+        <div class="absolute  h-full items-center mt-96 ml-16 mr-16">
+            <div class="flex-col  mt-10 ">
+                <h3 class="text-9xl font-semibold ">{{ movie.title }}</h3>
+                <div class="flex mt-5 text-gray-400">
+                    <p>Rok: {{ movie.year }} r.</p>
+                    <p class="ml-10">Gatunek: {{ movie.genre.join(', ') }}</p>
+
+                </div>
+                <button class="mt-5">
+                    <img src="./assets/icon play.png" width="60px" alt>
+                </button>
+                <p class="mt-5 text-gray-400">{{ movie.description }}</p>
+
+                <div class="flex absolute  mt-20 ">
+                    @if(outstandingMovies || escapeToAntoherWorldMovies || lastAddedMovies){
+                    @for(movie of movies.slice(currentPosition, currentPosition
+                    +7);; track movie.id;){
+
+                    <div 
+                        class="object-cover lg:h-72 lg:w-52 h-44 w-48 items-center mr-5  flex-none"
+                        [ngClass]="{
+                    'slide-in-from-left': slideDirection === 'left',
+                    'slide-in-from-right': slideDirection === 'right'
+                  }">
+                        <img 
+                            class="h-full w-full  border-transparent border-2 hover:border-purple-500 cursor-pointer"
+                            [src]="movie.path" alt="Movie image"
+                            (click)=" navigateToDetails(movie.id)"
+                            (click)="fetchMovie()">
+                    </div>
+                    
+                        <div class="absolute xl:left-3/4 xl:ml-52 left-96 top-1/2 w-96 " >
+                            <img width="25px" height="25px" src="./assets/right-chevron.png" alt="" (click)="next()" >
+                        </div>
+                   
+                        <div class="absolute -left-10 top-1/2 w-96">
+                            <img width="25px" height="25px" src="./assets/left-chevron.png" alt="" [ngStyle]="{'visibility': isLeftArrowVisible ? 'visible' : 'hidden'}" (click)="previous()">
+                        </div>
+                   
+                   
+                    }
+                    }
+                   
+                    
+                </div>
+               
+            </div>
+            
+        </div>
+      
+    </div>
+
+    }

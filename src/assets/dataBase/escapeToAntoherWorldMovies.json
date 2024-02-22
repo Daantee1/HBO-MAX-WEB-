@@ -1,0 +1,11 @@
+[
+    {"id": 12, "title": "Godzilla", "description": "Opis filmu Godzilla.", "year": 2014, "genre": ["Akcja", "Sci-Fi"], "path": "./assets/escapeToAnotherWorld/godzilla.jpeg"},
+    {"id": 13, "title": "Ex Machina", "description": "Opis filmu Ex Machina.", "year": 2014, "genre": ["Dramat", "Sci-Fi", "Thriller"], "path": "./assets/escapeToAnotherWorld/ex.jpg"},
+    {"id": 14, "title": "Ad Astra", "description": "Opis filmu Ad Astra.", "year": 2019, "genre": ["Dramat", "Sci-Fi", "Przygodowy"], "path": "./assets/escapeToAnotherWorld/ad astra.jpg"},
+    {"id": 15, "title": "Black Panther", "description": "Opis filmu Black Panther.", "year": 2018, "genre": ["Akcja", "Przygodowy", "Sci-Fi"], "path": "./assets/escapeToAnotherWorld/black.jpg"},
+    {"id": 16, "title": "Interstellar", "description": "Opis filmu Interstellar.", "year": 2014, "genre": ["Przygodowy", "Dramat", "Sci-Fi"], "path": "./assets/escapeToAnotherWorld/inter.jpg"},
+    {"id": 17, "title": "The Lord of the Rings", "description": "Opis filmu The Lord of the Rings.", "year": 2001, "genre": ["Przygodowy", "Fantasy"], "path": "./assets/escapeToAnotherWorld/lotr.jpg"},
+    {"id": 18, "title": "The Matrix", "description": "Opis filmu The Matrix.", "year": 1999, "genre": ["Akcja", "Sci-Fi"], "path": "./assets/escapeToAnotherWorld/matrix.jpg"},
+    {"id": 19, "title": "Harry Potter", "description": "Opis filmu Harry Potter.", "year": 2001, "genre": ["Przygodowy", "Fantasy"], "path": "./assets/escapeToAnotherWorld/harry.jpg"}
+]
+  

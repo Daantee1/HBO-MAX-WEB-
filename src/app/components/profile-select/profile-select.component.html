@@ -1,0 +1,76 @@
+@if(!profileCustomize){
+
+
+<h3 class=" text-white text-center text-4xl font-body py-5">
+    <a class="font-semibold uppercase" >HBO</a>
+    <a class="text-5xl" >MAX</a>
+ </h3>
+<h3 class="text-4xl font-bold text-white font-main text-center mt-8">Kto ogląda?</h3>
+
+<div class="flex justify-center w-full flex-wrap">
+
+@for(profile of profiles; track profile.name){
+
+    <div class="flex flex-col xl:ml-8 xl:mr-8 mr-4 ml-4 items-center justify-center xl:mt-24 mt-12 text-white font-main cursor-pointer hover:scale-110 transition-transform transform-gpu " (click)="goHome(profile)">
+ 
+        <div class=" flex justify-center items-center text-white w-36 h-36 border-8  border-violet-900 bg-gradient-to-br from-violet-600 to-indigo-800 rounded-full"> 
+            <span class="text-6xl ">{{profile.name.charAt(0)}}</span>
+        </div>
+        <div class="text-white mt-5 text-lg">{{profile.name}}</div>
+        
+    
+    </div>
+    
+}
+</div>
+
+<div class="flex justify-center mt-16">
+<button type="button" class="text-white font-main bg-gray-800 hover:bg-gray-900 border-transparent border-2 hover:border-purple-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold rounded-sm text-sm px-5 py-2.5 me-2 mb-2 w-44" #button  (focus)="isLimitReachedFunc()" [routerLink]="'/profile-select/profile-add'">Dodaj osobę</button>
+<button type="button" class="text-white font-main bg-gray-800 hover:bg-gray-900 border-transparent border-2 hover:border-purple-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold rounded-sm text-sm px-5 py-2.5 me-2 mb-2 w-44"  (click)="profileChange()">Zarządzaj profilami</button>
+</div>
+}
+
+
+@else{
+   
+<h3 class=" text-white text-center text-4xl font-body py-5">
+    <a class="font-semibold uppercase" >HBO</a>
+    <a class="text-5xl" >MAX</a>
+ </h3>
+<h3 class="text-4xl font-bold text-white font-main text-center mt-8">Kto ogląda?</h3>
+
+<div class="flex justify-center w-full flex-wrap">
+
+@for(profile of profiles; track profile.name){
+
+    <div class="flex flex-col xl:ml-8 xl:mr-8 mr-4 ml-4 items-center justify-center xl:mt-24 mt-12 text-white font-main cursor-pointer hover:scale-110 transition-transform transform-gpu ">
+ 
+        <div class=" flex justify-center items-center text-white w-36 h-36 border-8  border-violet-900 bg-black rounded-full "(click)="routeToCustomizeProfile(profile)" > 
+            
+            <img class="absolute z-0 opacity-100 " width="35px" height="35px" src="./assets/edit.png"  alt="">
+            <span class="text-6xl opacity-15 z-20 " >{{profile.name.charAt(0)}} </span>
+            
+            
+        </div>
+        <div class="text-white mt-5 text-lg z-10">{{profile.name}}</div>
+        
+    
+    </div>
+    
+}
+</div>
+
+<div class="flex justify-center mt-16">
+<button type="button" class="text-white font-main bg-gray-800 hover:bg-gray-900 border-transparent border-2 hover:border-purple-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold rounded-sm text-sm px-5 py-2.5 me-2 mb-2 w-44"  (click)="profileChange()">Zakończ</button>
+
+</div>
+
+}
+
+
+@if(isLimitReachedAlert){
+    <span class="font-main mt-2 text-red-600 text-center block">Dodana maksymalna liczba użytkowników!</span>
+}
+
+
+

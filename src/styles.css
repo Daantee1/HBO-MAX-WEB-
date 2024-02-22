@@ -1,0 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/hbo-max-2');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"');
+@import url('https://db.onlinewebfonts.com/c/97c4b25dc74e0ab045154e75a8fdd69d?family=Game+of+Thrones');
+@import url('https://db.onlinewebfonts.com/c/3eebf45cb41cffc869ab80665a886108?family=Kricky');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,13 @@
+[
+    {"id": 1, "title": "Star Wars 5", "description": "Opis filmu Star Wars 5.", "year": 1977, "genre": ["Przygodowy", "Fantasy", "Sci-Fi"], "path": "./assets/outstanding/star wars 5.jpg"},
+    {"id": 2, "title": "The Godfather", "description": "Opis filmu The Godfather.", "year": 1972, "genre": ["Dramat", "Kryminał"], "path": "./assets/outstanding/godfather.jpg"},
+    {"id": 3, "title": "Indiana Jones and the Raiders of the Lost Ark", "description": "Opis filmu Indiana Jones and the Raiders of the Lost Ark.", "year": 1981, "genre": ["Przygodowy", "Akcja"], "path": "./assets/outstanding/indiana jones ark.jpg"},
+    {"id": 4, "title": "Harry Potter and the Prisoner of Azkaban", "description": "Opis filmu Harry Potter and the Prisoner of Azkaban.", "year": 2004, "genre": ["Przygodowy", "Fantasy"], "path": "./assets/outstanding/harry potter prisoner.jpg"},
+    {"id": 5, "title": "Terminator", "description": "Opis filmu Terminator.", "year": 1984, "genre": ["Akcja", "Sci-Fi"], "path": "./assets/outstanding/terminator.jpg"},
+    {"id": 6, "title": "Rambo", "description": "Opis filmu Rambo.", "year": 1982, "genre": ["Akcja", "Dramat", "Thriller"], "path": "./assets/outstanding/rambo.jpg"},
+    {"id": 7, "title": "The Shining", "description": "Opis filmu The Shining.", "year": 1980, "genre": ["Dramat", "Horror"], "path": "./assets/outstanding/shining.jpg"},
+    {"id": 8, "title": "Mad Max", "description": "Opis filmu Mad Max.", "year": 1979, "genre": ["Akcja", "Przygodowy", "Sci-Fi"], "path": "./assets/outstanding/mad max.jpg"},
+    {"id": 9, "title": "Inception", "description": "Opis filmu Inception.", "year": 2010, "genre": ["Akcja", "Sci-Fi", "Thriller"], "path": "./assets/outstanding/inception.jpg"},
+    {"id": 10, "title": "Shutter Island", "description": "Opis filmu Shutter Island.", "year": 2010, "genre": ["Dramat", "Mystery", "Thriller"], "path": "./assets/outstanding/shutter island.jpg"},
+    {"id": 11, "title": "The Lighthouse", "description": "Opis filmu The Lighthouse.", "year": 2019, "genre": ["Dramat", "Fantasy", "Horror"], "path": "./assets/outstanding/lighthouse.jpg"}
+]

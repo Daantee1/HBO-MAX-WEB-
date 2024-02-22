@@ -1,0 +1,105 @@
+<div class="text-white font-main flex justify-center w-full ">
+    <div
+        class="flex justify-between lg:w-2/5 w-full mr-8 ml-5 mt-8  bg-slate-500 py-4 px-4 rounded-md font-medium text-lg "
+        [ngStyle]="{'background': 'linear-gradient(to bottom right, rgb(221, 221, 221, 0.06), rgb(221, 221, 221, 0.06), rgba(221, 221, 221, 0.06))'}">
+        @if(yearPlan){
+
+        <h3 class="font-medium">Płatność roczna</h3>
+        <h3 class="ml-auto mr-5  text-gray-200" >234,99 zł/rok.</h3>
+
+        }
+        @if(monthPlan){
+
+        <h3 class="font-medium">Płatność miesięczna</h3>
+        <h3 class="ml-auto mr-5  text-gray-200" >29,99 zł/mies.</h3>
+
+        }
+        <a [routerLink]="'/register-step-one'">
+            <img src="./assets/edit.png" width="25px" height="25px" alt class>
+        </a>
+    </div>
+
+</div>
+
+<div class="flex flex-col justify-center w-full mt-8 font-main text-white ">
+    <h3 class="text-center mb-8">KROK 2 z 2</h3>
+    <h3 class="text-3xl text-center tracking-wider mb-5">Utwórz konto</h3>
+    <h3 class="xl:text-sm text-center text-xs">Jesteś o krok bliżej, aby cieszyć
+        się najlepszą rozrywką oferowaną przez HBO Max</h3>
+    <form action  (ngSubmit)="register()" #registrationForm="ngForm">
+        <div class="flex justify-center mt-16 text-white ml-8 mr-8 ">
+            <div class=" h-96  ">
+                <label for="name"
+                    class=" absolute xl:right-2/3 xl:mr-4  text-gray-400 text-sm tracking-wider">Imię</label>
+                <input type="text" for="name"  name="name" [(ngModel)]="user.name"
+                    class="mr-8 mt-4 xl:w-72 w-full bg-transparent border-0 border-b focus:border-b-purple-600 focus:ring-0  pl-0"
+                    >
+
+                <label for="lastName"
+                    class="absolute mt-6 xl:mt-0 block xl:inline text-gray-400 text-sm tracking-wider ">Nazwisko</label>
+                <input type="text" for="lastName" name="lastName" [(ngModel)]="user.lastName"
+                    class="mt-10  xl:mt-4 xl:w-72 w-full bg-transparent border-0 border-b focus:border-b-purple-600  focus:ring-0 pl-0">
+
+                <label for="lastName"
+                    class="absolute block mt-6 text-gray-400 text-sm tracking-wider ">Adres
+                    e-mail</label>
+                <input type="text" for="name" name="email" [(ngModel)]="user.email " #email
+                    class="block mt-10 w-full bg-transparent border-0 border-b focus:border-b-purple-600  focus:ring-0 pl-0" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <label for="lastName"
+                    class="absolute block mt-6 text-gray-400 text-sm tracking-wider ">Potwierdź
+                    adres e-mail</label>
+                <input type="text" for="name" name="emailConfirm" [(ngModel)]="user.emailConfirm" (input)="isEmailValid()" #emailConfirm
+                    class="block mt-10 w-full bg-transparent border-0 border-b focus:border-b-purple-600  focus:ring-0 pl-0" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <label for="lastName"
+                    class="absolute block mt-6 text-gray-400 text-sm tracking-wider ">Hasło</label>
+                <input type="password" for="name" name="password" [(ngModel)]="user.password"  #password
+                    class="block mt-10 w-full bg-transparent border-0 border-b focus:border-b-purple-600  focus:ring-0 pl-0"  required 
+                    pattern="^(?=.*[0-9!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$"
+                    minlength="8" >
+                <span class="text-gray-400 text-xs ">Hasło musi składać się z co
+                    najmniej 8 znaków i zawierać cyfrę lub znak
+                    specjalny.</span>
+
+                    @if(!noEmailValid && email.value && emailConfirm.value){
+                        <span class="block text-center font-semibold text-sm text-red-700 mt-10">Adresy mailowe nie są takie same!</span>
+                    }
+                    @if(emailIsTaken){
+                        <span class="block text-center font-semibold text-sm text-red-700 mt-10">Ten adres mailowy jest już wykorzystany!</span>
+                    }
+                    
+                <div class="flex items-center mb-4 mt-8 ">
+                    <input id="default-checkbox" type="checkbox" value
+                        class="w-5 h-5 text-purple-600 bg-transparent border-gray-300 rounded focus:ring-purple-500 ">
+                    <p for="default-checkbox"
+                        class="ms-2 flex-grow font-medium mt-6 text-white w-96 text-xs">Wykorzystaj
+                        mój adres e-mail do wysyłania promocji marketingowych i
+                        ofert od HBO Max (spółka należąca do WarnerMedia) i
+                        Podmiotów stowarzyszonych za pośrednictwem poczty
+                        elektronicznej, mediów społecznościowych i innych
+                        kanałów</p>
+                </div>
+                <div
+                    class="border-transparent rounded-md py-4 w-full mt-8  flex flex-col"
+                    [ngStyle]="{'background': 'linear-gradient(to bottom right, rgb(221, 221, 221, 0.06), rgb(221, 221, 221, 0.06), rgba(221, 221, 221, 0.06))'}">
+                    <h3
+                        class="text-xs w-96 mr-auto ml-auto text-center flex-grow">Klikając
+                        Utwórz konto, potwierdzasz, że masz ukończone 18 lat,
+                        zgadzasz się z Warunki korzystania i potwierdzasz, że
+                        zapoznałeś się z naszą Polityką Prywatności.</h3>
+                    <button type="submit"  [disabled]="!registrationForm.form.valid || !noEmailValid "
+                        class="text-white bg-purple-700 hover:bg-purple-800 mt-10 tracking-wider focus:outline-none focus:ring-4 focus:ring-purple-300 rounded-full text-base font-semibold w-96 mr-auto ml-auto py-4 text-center mb-2 cursor-pointer"
+                        [routerLink]="'/register-step-two'">UTWÓRZ KONTO</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+<div class="xl:mt-80 mt-96">
+<app-footer></app-footer>
+</div>

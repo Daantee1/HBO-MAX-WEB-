@@ -1,0 +1,135 @@
+@if(trueDetective) {
+<div class="absolute  top-0 w-full h-full z-0 font-main slide  "(mouseover)="isHovering = true" (mouseout)="isHovering = false"
+ngClass="">
+
+    <img src="./assets/true detective.png" class="w-screen h-3/4 "
+        style="mask-image: linear-gradient(to bottom, black 50%, transparent 100%);"
+        alt>
+
+    <div class="px-14 absolute top-1/3 flex flex-col  mr-auto ml-auto w-full xl:w-auto ">
+        <h3 class="text-6xl text-center font-semibold text-white mb-14">DETEKTYW
+            <a class="block ml-5 text-4xl font-medium">KRAINA NOCY</a></h3>
+        <p class="text-white  font-semibold text-center xl:text-left">Nowy
+            sezon</p>
+        <p class="text-white xl:mb-4 text-lg text-center xl:text-left">Prawda
+            kryje sie w ciemności.</p>
+        <div class="xl:flex hidden xl:visible">
+            <button>
+            <img src="./assets/icon play.png" width="60px" alt>
+        </button>
+            <button type="button"
+            (click)=" navigateToDetails(30)"
+                class="ml-5 mt-2 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300  rounded-lg  px-5 py-2.5 me-2 mb-2 text-xl font-semibold border-transparent border-2 hover:border-purple-500">Więcej
+                info</button>
+        </div>
+
+    </div>
+</div>
+}
+@if(houseOfTheDragon){
+    <div class="absolute  top-0 w-full h-full z-0 font-main slide "(mouseover)="isHovering = true" (mouseout)="isHovering = false"
+    ngClass="">
+    
+        <img src="./assets/house of dragon.jpg" class="w-screen h-3/4 "
+            style="mask-image: linear-gradient(to bottom, black 50%, transparent 100%);"
+            alt>
+    
+        <div class="px-14 absolute bottom-48 flex flex-col  mr-auto ml-auto w-full xl:w-auto">
+            <h3 class="text-6xl text-center font-semibold text-yellow-300 mb-14 font-got">ROD SMOKA
+                </h3>
+            <p class="text-white  font-semibold text-center xl:text-left">Nowy
+                sezon</p>
+            <p class="text-white xl:mb-4 text-lg text-center xl:text-left">Kto zostanie władcą Westeros?</p>
+            <div class="xl:flex hidden xl:visible ">
+                <button>
+                <img src="./assets/icon play.png"  width="60px" alt>
+            </button>
+                <button type="button"
+                (click)=" navigateToDetails(31)"
+                    class="ml-5 mt-2 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300  rounded-lg  px-5 py-2.5 me-2 mb-2 text-xl font-semibold border-transparent border-2 hover:border-purple-500">Więcej
+                    info</button>
+            </div>
+    
+        </div>
+    </div>
+    }
+
+    @if(theSopranos){
+        <div class="absolute  top-0 w-full h-full z-0 font-main slide" (mouseover)="isHovering = true" (mouseout)="isHovering = false">
+        
+            <img src="./assets/sopranos.jpg" class="w-screen h-3/4 "
+                style="mask-image: linear-gradient(to bottom, black 50%, transparent 100%);"
+                alt>
+        
+            <div class="px-14 absolute bottom-48 flex flex-col  mr-auto ml-auto w-full xl:w-auto">
+                <h3 class="text-6xl text-center font-bold text-red-800 mb-14">RODZINA SOPRANO
+                    </h3>
+                <p class="text-white  font-semibold text-center xl:text-left">Jubileusz</p>
+                <p class="text-white xl:mb-4 text-lg text-center xl:text-left">Minęło 16 lat od zakończenia kultowego serialu.</p>
+                <div class="xl:flex hidden xl:visible">
+                    <button>
+                    <img src="./assets/icon play.png" width="60px" alt>
+                </button>
+                    <button type="button"
+                    (click)=" navigateToDetails(32)"
+                        class="ml-5 mt-2 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300  rounded-lg  px-5 py-2.5 me-2 mb-2 text-xl font-semibold border-transparent border-2 hover:border-purple-500">Więcej
+                        info</button>
+                </div>
+        
+            </div>
+        </div>
+        }
+        @if(rickAndMorty){
+            <div class="absolute  top-0 w-full h-full z-0 font-main slide" (mouseover)="isHovering = true" (mouseout)="isHovering = false">
+            
+                <img src="./assets/rick and morty.jpg" class="w-screen h-3/4 "
+                    style="mask-image: linear-gradient(to bottom, black 50%, transparent 100%);"
+                    alt>
+            
+                <div class="px-14 absolute bottom-48 flex flex-col  mr-auto ml-auto w-full xl:w-auto">
+                    <h3 class="text-8xl text-center font-semibold  mb-14 font-ram text-blue-100">Rick i Morty
+                        </h3>
+                    <p class="text-white  font-semibold text-center xl:text-left">Nowy sezon</p>
+                    <p class="text-white xl:mb-4 text-lg text-center xl:text-left">Zupełnie nowe przygody ekscentrycznego Ricka!</p>
+                    <div class="xl:flex hidden xl:visible">
+                        <button>
+                        <img src="./assets/icon play.png" width="60px" alt>
+                    </button>
+                        <button type="button"
+                        (click)=" navigateToDetails(33)"
+                            class="ml-5 mt-2 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300  rounded-lg  px-5 py-2.5 me-2 mb-2 text-xl font-semibold border-transparent border-2 hover:border-purple-500">Więcej
+                            info</button>
+                    </div>
+            
+                </div>
+            </div>
+            }
+           <div [ngStyle]="{'visibility': isHovering ? 'visible' : 'hidden'}" (mouseover)="isHovering = true" (mouseout)="isHovering = false">
+        <div class="absolute right-0 top-1/3 mr-3 mt-5 ">
+            <img width="25px" height="25px" src="./assets/right-chevron.png" alt="" (click)="nextRecomm()">
+        </div>
+        <div class="absolute left-0 top-1/3 ml-3 mt-5">
+            <img width="25px" height="25px" src="./assets/left-chevron.png" alt="" (click)="previousRecomm()">
+        </div>
+            </div>
+    
+
+    <div class="relative top-2/3 w-full h-full flex justify-center  cursor-pointer ">
+        <span class="flex w-2 h-2 me-3 bg-gray-400 rounded-full "
+            [ngClass]="{'bg-white': trueDetective, 'bg-gray-400': !trueDetective}"
+            (click)="setTrueDetective()" (click)="currentSlide(1)"></span>
+        <span class="flex w-2 h-2 me-3 bg-gray-400 rounded-full "
+        [ngClass]="{'bg-white': houseOfTheDragon, 'bg-gray-400': !houseOfTheDragon}"
+        (click)="setHouseOfTheDragon()" (click)="currentSlide(2)"></span>
+        <span class="flex w-2 h-2 me-3 bg-gray-400 rounded-full "
+        [ngClass]="{'bg-white': theSopranos, 'bg-gray-400': !theSopranos}"
+        (click)="setTheSopranos()" (click)="currentSlide(3)"
+        ></span>
+        <span class="flex w-2 h-2 me-3 bg-gray-400 rounded-full "
+        [ngClass]="{'bg-white': rickAndMorty, 'bg-gray-400': !rickAndMorty}"
+        (click)="setRickAndMorty()" (click)="currentSlide(4)"
+        ></span>
+    </div>
+
+
+

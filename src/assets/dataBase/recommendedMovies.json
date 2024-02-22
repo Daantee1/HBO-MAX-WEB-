@@ -1,0 +1,7 @@
+
+[
+{"id": 30, "title": "Detektyw: Kraina Nocy", "description": "Opis filmu Deteketyw: Kraina Nocy", "year": 2024, "genre": ["dramat", "kryminał"], "path": "./assets/true detective.png"},
+{"id": 31, "title": "Ród Smoka", "description": "Opis filmu Ród Smoka.", "year": 2023, "genre": ["dramat", "fantasy"], "path": "./assets/house of dragon.jpg"},
+{"id": 32, "title": "Rodzina Soprano", "description": "Opis filmu Rodzina Soprano.", "year": 1999, "genre": ["dramat", "gangsterski"], "path": "./assets/sopranos.jpg"},
+{"id": 33, "title": "Rick i Morty", "description": "Opis filmu Rick i Morty.", "year": 2013, "genre": ["animacja", "sci-fi"], "path": "./assets/rick and morty.jpg"}
+]

@@ -1,0 +1,11 @@
+[
+  {"id": 20, "title": "Ninja Kamui", "description": "Opis filmu Ninja Kamui.", "year": 2022, "genre": ["akcja", "przygodowy"], "path": "./assets/lastAdded/ninja kamui.jpg"},
+  {"id": 21, "title": "Azyl", "description": "Opis filmu Azyl.", "year": 2021, "genre": ["dramat", "thriller"], "path": "./assets/lastAdded/azyl.jpeg"},
+  {"id": 23, "title": "Daredevil", "description": "Opis filmu Daredevil.", "year": 2023, "genre": ["akcja", "sci-fi"], "path": "./assets/lastAdded/daredevil.jpg"},
+  {"id": 24, "title": "Zjawa", "description": "Opis filmu Zjawa.", "year": 2020, "genre": ["horror", "thriller"], "path": "./assets/lastAdded/zjawa.jpg"},
+  {"id": 25, "title": "Dune", "description": "Opis filmu Dune.", "year": 2024, "genre": ["sci-fi", "przygodowy"], "path": "./assets/lastAdded/dune.jpg"},
+  {"id": 26, "title": "The Last of Us", "description": "Opis filmu The Last of Us.", "year": 2023, "genre": ["dramat", "post-apokaliptyczny"], "path": "./assets/lastAdded/the last of us.jpg"},
+  {"id": 27, "title": "Piraci z Karaibów", "description": "Opis filmu Pirates.", "year": 2022, "genre": ["przygodowy", "komedia"], "path": "./assets/lastAdded/pirates.jpg"},
+  {"id": 28, "title": "Wiezień labiryntu", "description": "Opis filmu Maze.", "year": 2021, "genre": ["thriller", "mystery"], "path": "./assets/lastAdded/maze.jpg"},
+  {"id": 29, "title": "Scarface", "description": "Opis filmu Scar.", "year": 2023, "genre": ["dramat", "kryminał"], "path": "./assets/lastAdded/scar.jpg"}
+]

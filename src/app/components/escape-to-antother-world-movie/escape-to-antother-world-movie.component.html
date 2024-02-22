@@ -1,0 +1,27 @@
+
+<div class="ml-16 font-main font-semibold relative bottom-48" (mouseover)="isHovering = true" (mouseout)="isHovering = false">
+    <h3 class="text-white mb-4">Ucieczka do innego świata</h3>
+    <div class="relative  text-white flex h-full w-full " >
+       
+        @for(movie of escapeToAntoherWorldMovies.slice(currentPosition, currentPosition +7); track movie.id; ){
+        <div class="object-cover lg:h-72 lg:w-52 h-44 w-48 items-center mr-5  flex-none" 
+        [ngClass]="{
+            'slide-in-from-left': slideDirection === 'left',
+            'slide-in-from-right': slideDirection === 'right'
+          }">
+            <img  class="h-full w-full  border-transparent border-2 hover:border-purple-500 cursor-pointer"  [src]="movie.path" alt="Movie image" 
+            (click)=" navigateToDetails(movie.id)"
+            >
+        </div>
+        <div [ngStyle]="{'visibility': isHovering ? 'visible' : 'hidden'}" (mouseover)="isHovering = true" (mouseout)="isHovering = false">
+            <div class="absolute right-10 top-1/2" >
+                <img width="25px" height="25px" src="./assets/right-chevron.png" alt="" (click)="next()">
+            </div>
+            <div class="absolute -left-10 top-1/2 w-96">
+                <img width="25px" height="25px" src="./assets/left-chevron.png" alt="" [ngStyle]="{'visibility': isLeftArrowVisible ? 'visible' : 'hidden'}" (click)="previous()">
+            </div>
+        </div>
+    }
+    
+    </div>
+    </div>
